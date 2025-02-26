@@ -35,7 +35,7 @@ Una vez instalado podemos proceder a configurarlo, para ello accederemos a mysql
 
 ### CREACION DEL SERVIDOR DE NGINX (PROXY)
 
-Empezamos dirigiendonos a la carpeta donde nginx tiene las configuraciones de sus sitios (/etc/nginx/sites-available) y crearemos nuestro script de proxy inverso. Finalmente añadiremos el archivvo mediante enlace a (/etc/nginx/sites-available) mediante `sudo ln -s /etc/nginx/sites-available/proxy /etc/nginx/sites-enabled/proxy` y reiniciarmemos nginx con 'sudo sytemctl restart nginx'.
+Empezamos dirigiendonos a la carpeta donde nginx tiene las configuraciones de sus sitios (/etc/nginx/sites-available) y crearemos nuestro script de proxy inverso. Finalmente añadiremos el archivo mediante enlace a (/etc/nginx/sites-available) mediante `sudo ln -s /etc/nginx/sites-available/proxy /etc/nginx/sites-enabled/proxy` y reiniciarmemos nginx con 'sudo sytemctl restart nginx'.
 
 Codigo de configuracion del proxy:
 `server {
@@ -60,7 +60,7 @@ server {
     }
 }`
 
-El codigo escuchara por el puerto 3000 la aplicacion web A y por el puerto 8000 la aplicacion B y los sirve por el puerto 80.
+El codigo escuchara por el puerto 3000 la aplicacion node y por el puerto 8080 la aplicacion php y los sirve por el puerto 80.
 
 ![Captura del codigo de configuracion de nginx](assets/Captura_NginX_01.png)
 
