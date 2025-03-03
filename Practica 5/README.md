@@ -73,6 +73,9 @@
 ![Captura de la configuracion del la app2](assets/Captura_app2_app_01.png)
 
 > [!NOTE]  
+> La direccion de volumenes es erronea, la correcta es ./demoappphp/app:/var/www/html
+
+> [!NOTE]  
 > Se ha modificado el archivo /app/index.php para acceder correctamente a la base de datos
 
 - Comprueba que funciona la ruta: http://app2.local/api/deseos
