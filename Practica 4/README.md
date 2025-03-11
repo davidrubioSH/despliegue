@@ -38,7 +38,8 @@ Una vez instalado podemos proceder a configurarlo, para ello accederemos a mysql
 Empezamos dirigiendonos a la carpeta donde nginx tiene las configuraciones de sus sitios (/etc/nginx/sites-available) y crearemos nuestro script de proxy inverso. Finalmente añadiremos el archivo mediante enlace a (/etc/nginx/sites-available) mediante `sudo ln -s /etc/nginx/sites-available/proxy /etc/nginx/sites-enabled/proxy` y reiniciarmemos nginx con 'sudo sytemctl restart nginx'.
 
 Codigo de configuracion del proxy:
-`server {
+
+server {
     listen 80;
     server_name node.local;
 
@@ -58,7 +59,7 @@ server {
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
     }
-}`
+}
 
 El codigo escuchara por el puerto 3000 la aplicacion node y por el puerto 8080 la aplicacion php y los sirve por el puerto 80.
 
@@ -88,7 +89,8 @@ Finalmete toca la aplicacion php de apache. Primero importaremos al igual que en
 
 Codigo de configuracion:
 
-`<VirtualHost *:8080>
+
+<VirtualHost *:8080>
 
         ServerName demoappphp
 
